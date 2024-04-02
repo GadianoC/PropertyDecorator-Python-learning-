@@ -15,7 +15,7 @@ class Status:
         
     @property
     def take_damage(self):
-        return __health
+        return self.__health
 
     @take_damage.setter
     def take_damage(self, total_damage):
