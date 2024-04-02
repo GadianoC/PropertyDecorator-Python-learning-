@@ -5,13 +5,16 @@ class Status:
         self.__attack_power = attack_power
 
     def attack(self, target):
-        if target.is_alive() == True:
-            target.take_damage = self.__attack_power
-            print(f'{self.__name} dealt {self.__attack_power} to {target.__name}')
-            print(target.take_damage)
-            print(f'{target.__name} health: {target.__health}')
+        if self.is_alive() == True:
+            if target.is_alive() == True:
+                target.take_damage = self.__attack_power
+                print(f'{self.__name} dealt {self.__attack_power} to {target.__name}')
+                print(target.take_damage)
+                print(f'{target.__name} health: {target.__health}')
+            else:
+                print(f'{target.__name} is Already Dead')
         else:
-            print(f'{target.__name} is Already Dead')
+            print(f'{self.name} has no Entity to attack')
         
     @property
     def take_damage(self):
