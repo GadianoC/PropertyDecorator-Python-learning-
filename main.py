@@ -14,7 +14,7 @@ class Status:
             else:
                 print(f'{target.__name} is Already Dead')
         else:
-            print(f'{self.name} has no Entity to attack')
+            print(f'{self.__name} has no Entity to attack')
         
     @property
     def take_damage(self):
