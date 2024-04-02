@@ -44,13 +44,14 @@ goblin1 = Enemy(name='Lesser Goblin', health= 100, attack_power=5)
 player1 = Player(name='Hero', health=100, attack_power=10)
 
 # debugging
+print('Type "Quit", if ever you want to exit: \n')
+while True:
+    print(player1)
+    print(goblin1)
 
-print(player1)
-print(goblin1)
+    player1.attack(goblin1)
+    goblin1.attack(player1)
 
-
-player1.attack(goblin1)
-goblin1.attack(player1)
-
-print(player1)
-print(goblin1)
+    user_input = input('\nTerminal: ')
+    if user_input.lower() == 'quit':
+        break
